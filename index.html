@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Financial Statements Lab — independent financial analysis, IFRS insights, valuation and financial modelling.">
+<title>Financial Statements Lab | Research & Financial Modelling</title>
+<style>
+:root{--bg:#0b1220;--panel:#152238;--text:#edf3fb;--muted:#a9b8cc;--accent:#70d6c2;--line:#30415b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;line-height:1.6}
+a{color:var(--accent)}.wrap{max-width:1100px;margin:auto;padding:0 24px}
+header{border-bottom:1px solid var(--line)}nav{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:20px 0;flex-wrap:wrap}
+.brand{font-size:1.1rem;font-weight:800;letter-spacing:.03em;color:white;text-decoration:none}.navlinks{display:flex;gap:20px;flex-wrap:wrap}
+.navlinks a{text-decoration:none;color:var(--muted)}.navlinks a:hover{color:white}
+.hero{padding:92px 0 76px}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.16em;font-weight:700;font-size:.78rem}
+h1{font-size:clamp(2.5rem,6vw,4.7rem);line-height:1.1;letter-spacing:-.04em;margin:18px 0;max-width:850px}
+.lead{font-size:1.2rem;color:var(--muted);max-width:720px}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-block;padding:12px 20px;border-radius:8px;text-decoration:none;font-weight:700}
+.primary{background:var(--accent);color:#09201e}.secondary{border:1px solid var(--line);color:var(--text)}
+section{padding:55px 0;border-top:1px solid var(--line)}h2{font-size:1.8rem;margin:0 0 10px}.sectionintro{color:var(--muted);margin-bottom:28px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:var(--panel);border:1px solid var(--line);padding:26px;border-radius:14px}
+.tag{display:inline-block;font-size:.75rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+.card h3{margin:12px 0;font-size:1.4rem}.card p{color:var(--muted)}
+.card a{font-weight:700}.links{display:flex;flex-wrap:wrap;gap:14px;margin-top:18px}
+.note{color:var(--muted);font-size:.9rem}footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:600px){.hero{padding:60px 0}.wrap{padding:0 18px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><nav><a class="brand" href="./">FINANCIAL STATEMENTS LAB</a>
+<div class="navlinks"><a href="#research">Equity Research</a><a href="#expertise">Expertise</a><a href="#about">About</a></div></nav></div></header>
+<main>
+<div class="wrap hero"><div class="eyebrow">Financial analysis · IFRS · Valuation</div>
+<h1>From financial statements to investment insight.</h1>
+<p class="lead">Independent research and practical financial modelling, connecting accounting fundamentals, cash flow analysis, business valuation and strategic decision-making.</p>
+<div class="actions"><a class="btn primary" href="#research">Explore Research</a><a class="btn secondary" href="#expertise">Explore Expertise</a></div></div>
+<section id="research"><div class="wrap"><h2>Equity Research</h2><p class="sectionintro">Company-level research packages with supporting models and analysis.</p>
+<div class="grid"><article class="card"><span class="tag">Research case 01 · 1211.HK</span><h3>BYD Company Limited</h3>
+<p>Electric vehicles, batteries and global expansion. Explore the research thesis, financial model and valuation materials.</p>
+<div class="links"><a href="Equity-Research/BYD/">Open BYD folder →</a></div>
+<p class="note">Research files are hosted in the repository. This link opens the GitHub Pages directory path, which may not display a file listing; use the repository link below to browse and download files.</p>
+<div class="links"><a id="byd-repo" href="#">Browse BYD files on GitHub ↗</a></div>
+</article><article class="card"><span class="tag">Upcoming</span><h3>More Research Cases</h3><p>Additional company analyses and valuation case studies will be added as they are completed and reviewed.</p></article></div>
+</div></section>
+<section id="expertise"><div class="wrap"><h2>Areas of Expertise</h2><p class="sectionintro">Technical accounting translated into decision-useful financial insight.</p>
+<div class="grid"><div class="card"><h3>Cash Flow & IFRS</h3><p>IAS 7, IFRS 18 and the reconciliation between reported earnings and cash generation.</p></div>
+<div class="card"><h3>Three-Statement Modelling</h3><p>Integrated income statement, balance sheet and cash flow forecasting.</p></div>
+<div class="card"><h3>Valuation & M&A</h3><p>DCF, scenario analysis, investment decisions and synergy-realization economics.</p></div></div></div></section>
+<section id="about"><div class="wrap"><h2>About the Lab</h2><p class="lead">Financial Statements Lab is a public portfolio of applied financial analysis, built to demonstrate rigorous accounting logic, transparent assumptions and reproducible valuation work.</p>
+<p class="note">Independent educational research. Not investment advice. Estimates and opinions may change; verify source data and assumptions before relying on any analysis.</p>
+<a id="repo-link" href="#">View the full GitHub repository ↗</a></div></section>
+</main><footer><div class="wrap">© <span id="year"></span> Financial Statements Lab · Independent research and financial modelling</div></footer>
+<script>
+document.getElementById('year').textContent=new Date().getFullYear();
+const parts=location.pathname.split('/').filter(Boolean);
+const repo=parts.length ? parts[0] : '';
+const owner=location.hostname.endsWith('.github.io') ? location.hostname.replace('.github.io','') : '';
+if(owner&&repo){
+const root='https://github.com/'+encodeURIComponent(owner)+'/'+encodeURIComponent(repo);
+document.getElementById('repo-link').href=root;
+document.getElementById('byd-repo').href=root+'/tree/main/Equity-Research/BYD';
+document.querySelector('.card a[href="Equity-Research/BYD/"]').href=root+'/tree/main/Equity-Research/BYD';
+}else{
+document.getElementById('repo-link').removeAttribute('href');
+document.getElementById('byd-repo').removeAttribute('href');
+}
+</script>
+</body></html>
