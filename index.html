@@ -58,8 +58,8 @@ const owner=location.hostname.endsWith('.github.io') ? location.hostname.replace
 if(owner&&repo){
 const root='https://github.com/'+encodeURIComponent(owner)+'/'+encodeURIComponent(repo);
 document.getElementById('repo-link').href=root;
-document.getElementById('byd-repo').href=root+'/tree/main/Equity-Research/BYD';
-document.querySelector('.card a[href="Equity-Research/BYD/"]').href=root+'/tree/main/Equity-Research/BYD';
+document.getElementById('byd-repo').href=root+'/tree/main/equity-research/%20BYD';
+document.querySelector('.card a[href="equity-research/%20BYD/"]').href=root+'/tree/main/equity-research/%20BYD';
 }else{
 document.getElementById('repo-link').removeAttribute('href');
 document.getElementById('byd-repo').removeAttribute('href');
