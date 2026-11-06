@@ -37,9 +37,9 @@ section{padding:55px 0;border-top:1px solid var(--line)}h2{font-size:1.8rem;marg
 <section id="research"><div class="wrap"><h2>Equity Research</h2><p class="sectionintro">Company-level research packages with supporting models and analysis.</p>
 <div class="grid"><article class="card"><span class="tag">Research case 01 · 1211.HK</span><h3>BYD Company Limited</h3>
 <p>Electric vehicles, batteries and global expansion. Explore the research thesis, financial model and valuation materials.</p>
-<div class="links"><a href="byd-research.html">Open BYD folder →</a></div>
-<p class="note">Research files are hosted in the repository. This link opens the GitHub Pages directory path, which may not display a file listing; use the repository link below to browse and download files.</p>
-<div class="links"><a id="byd-repo" href="byd-research.html">Browse BYD files on GitHub ↗</a></div>
+<div class="links"><a href="byd-research.html">View BYD Research →</a></div>
+<p class="note">Read the BYD research overview, or browse the supporting model, reports and charts in the GitHub repository.</p>
+<div class="links"><a id="byd-repo" href="https://github.com/Masaki-Yada/financial-statements-lab/tree/main/equity-research/%20BYD">Browse BYD files on GitHub ↗</a></div>
 </article><article class="card"><span class="tag">Upcoming</span><h3>More Research Cases</h3><p>Additional company analyses and valuation case studies will be added as they are completed and reviewed.</p></article></div>
 </div></section>
 <section id="expertise"><div class="wrap"><h2>Areas of Expertise</h2><p class="sectionintro">Technical accounting translated into decision-useful financial insight.</p>
@@ -48,21 +48,7 @@ section{padding:55px 0;border-top:1px solid var(--line)}h2{font-size:1.8rem;marg
 <div class="card"><h3>Valuation & M&A</h3><p>DCF, scenario analysis, investment decisions and synergy-realization economics.</p></div></div></div></section>
 <section id="about"><div class="wrap"><h2>About the Lab</h2><p class="lead">Financial Statements Lab is a public portfolio of applied financial analysis, built to demonstrate rigorous accounting logic, transparent assumptions and reproducible valuation work.</p>
 <p class="note">Independent educational research. Not investment advice. Estimates and opinions may change; verify source data and assumptions before relying on any analysis.</p>
-<a id="repo-link" href="#">View the full GitHub repository ↗</a></div></section>
+<a id="repo-link" href="https://github.com/Masaki-Yada/financial-statements-lab">View the full GitHub repository ↗</a></div></section>
 </main><footer><div class="wrap">© <span id="year"></span> Financial Statements Lab · Independent research and financial modelling</div></footer>
-<script>
-document.getElementById('year').textContent=new Date().getFullYear();
-const parts=location.pathname.split('/').filter(Boolean);
-const repo=parts.length ? parts[0] : '';
-const owner=location.hostname.endsWith('.github.io') ? location.hostname.replace('.github.io','') : '';
-if(owner&&repo){
-const root='https://github.com/'+encodeURIComponent(owner)+'/'+encodeURIComponent(repo);
-document.getElementById('repo-link').href=root;
-document.getElementById('byd-repo').href=root+'/tree/main/equity-research/%20BYD';
-document.querySelector('.card a[href="equity-research/%20BYD/"]').href=root+'/tree/main/equity-research/%20BYD';
-}else{
-document.getElementById('repo-link').removeAttribute('href');
-document.getElementById('byd-repo').removeAttribute('href');
-}
-</script>
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body></html>
